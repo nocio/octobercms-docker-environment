@@ -1,0 +1,11 @@
+version: '2'
+services:
+  app:
+    container_name: octobercms-env
+    build:
+      context: .
+    image: octobercms-env:latest
+    volumes:
+     - "./src/${SRC}:/var/www/html/${TARGET}"
+    ports:
+     - "4000:80"
